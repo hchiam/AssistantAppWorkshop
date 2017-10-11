@@ -19,8 +19,8 @@
 
 ![](screenshots/00-setup/05-build-dialogflow-app-popup.markedup.png)
 - In the pop-up that appears, click on the "Create actions on Dialogflow" card.
-  - This will open Dialogflow in a new tab.
-  - Sign in to Google again if necessary.
+- This will open Dialogflow in a new tab.
+- Sign in to Google again if necessary.
 
 ![](screenshots/00-setup/06-dialogflow-save-app.markedup.png)
 - In the tab containing Dialogflow, after signing in to Google, you'll end up on the project creation page.
