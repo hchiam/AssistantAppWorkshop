@@ -60,6 +60,8 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 
 # Enable Small Talk
 
+Dialogflow's Small Talk feature allows your application to respond to simple questions like "How are you?"
+
 ![](screenshots/00-setup/13-dialogflow-click-on-small-talk.markedup.png)
 - Click on the Small Talk page in the menu on the left.
 
