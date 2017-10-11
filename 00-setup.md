@@ -51,7 +51,7 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 - Enable the Inline Editor.
 
 ![](screenshots/00-setup/11-dialogflow-deploy-inline-editor.markedup.png)
-- Click on the "Deploy" button
+- Click on the "Deploy" button.
 - This may take a few minutes.
 - You can continue with the rest of the setup during the deployment.
 
