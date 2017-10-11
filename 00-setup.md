@@ -86,7 +86,7 @@ Dialogflow's Small Talk feature allows your application to respond to simple que
 
 ## Bonus: test out your app on your smartphone!
 
-- This will only work on phones that satisfy [these requirements](https://support.google.com/assistant/answer/7172657?co=GENIE.Platform%3DAndroid&hl=en#requirements).
+- This will only work on Android phones that satisfy [these requirements](https://support.google.com/assistant/answer/7172657?co=GENIE.Platform%3DAndroid&hl=en#requirements).
 - Make sure that your phone is signed in to the same Google account that you've used to create the application.
 - Touch and hold the Home button or say "OK Google" to activate the Google Assistant.
 - Type or say "Talk to my test app".
