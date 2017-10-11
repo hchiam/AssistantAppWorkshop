@@ -82,7 +82,7 @@ Dialogflow's Small Talk feature allows your application to respond to simple que
 
 ![](screenshots/00-setup/16-talk-to-my-test-app.markedup.png)
 - Type or say "Talk to my test app" into the simulator on the left of the page.
-- To test your application, you may need to enable some permissions on your Google account. If necessary, follow the instructions to enable these permissions.
+- You may need to turn on Voice & Audio Activity, Web & App Activity (including Chrome browsing history), and Device Information permissions for your Google Account at https://myaccount.google.com/activitycontrols.
 - Try some small talk, e.g. "How are you?" or "You're so clever."
 
 ## Bonus: test out your app on your smartphone!
