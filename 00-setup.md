@@ -42,6 +42,8 @@
 
 # Enable Inline Editor
 
+The Inline Editor allows you to deploy and edit Firebase Functions from your browser. We'll use Firebase Functions to create, edit, and delete to-dos that we'll store in Firebase Database.
+
 ![](screenshots/00-setup/09-dialogflow-integrations-page.markedup.png)
 - Click on the Fulfillment page in the menu on the left.
 
