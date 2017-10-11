@@ -49,6 +49,7 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 
 ![](screenshots/00-setup/10-dialogflow-enable-inline-editor.markedup.png)
 - Enable the Inline Editor.
+- Copy [the scaffold code](code/scaffold.js) into the editor.
 
 ![](screenshots/00-setup/11-dialogflow-deploy-inline-editor.markedup.png)
 - Click on the "Deploy" button.
