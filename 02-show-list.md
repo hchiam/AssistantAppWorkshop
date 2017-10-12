@@ -10,7 +10,7 @@
   - Show items list
   - Show todo list
   - Show items
-- Enter action name as show
+- Enter action name as `show`.
 - Check the "Use webhook" checkbox.
 - Click on the "Save" button.
 
