@@ -29,6 +29,8 @@
   // send the response
   respond(`Here is your list:  \n${list}`);
 ```
+- `TODO: Explain code`
+
 - Deploy your new code.
 
 # Test the intent
