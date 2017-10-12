@@ -61,10 +61,10 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 ![](screenshots/00-setup/12-dialogflow-inline-editor-deployed.markedup.png)
 - A message will appear when the deployment is finished.
 
-# Enable Firebase Database
+# Setup Firebase Database
 
 ![](screenshots/00-setup/17-dialogflow-inline-editor-firebase.markedup.png)
-- Click on the "View execution logs in the Firebase console" link.
+- Click on the "View execution logs in the Firebase console" link to open your Firebase page.
 
 ![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
 - Click on the Settings button on the sidebar top
