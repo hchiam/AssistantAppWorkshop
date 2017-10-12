@@ -4,7 +4,7 @@
 - Navigate to the Intents page.
 - Click on the `Create intent` button.
 - Give your intent a name.
-- In the `User says` section, add some expressions that you think people would use to create a new item. Here are some examples:
+- In the `User says` section, add some expressions that you think people would use to show the to-do list. Here are some examples:
   - Show list
   - Show items list
   - Show todo list
