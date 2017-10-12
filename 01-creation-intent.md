@@ -16,7 +16,7 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
   - Create a todo
 - Your examples don't have to be comprehensive: Dialogflow automatically combines aspects of the examples you provide to generate new ones. For example, given the examples above, Dialogflow will also invoke your new intent when the user says "Make new todo".
 
-![](screenshots/01-creation-intent/03-create-intent-parameter.markedup)
+![](screenshots/01-creation-intent/03-create-intent-parameter.markedup.png)
 - Click on the quotation marks in the left of the "User says" input box. They should be replaced by an at symbol (@).
 - You're now in template mode. Try entering these templates:
   - I want to create a new todo with text @sys.any:text
