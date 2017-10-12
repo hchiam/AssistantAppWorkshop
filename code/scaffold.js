@@ -13,11 +13,12 @@ const googleAssistantRequest = 'google'; // Constant to identify Google Assistan
   3. Click on the 'Add Firebase to your web app' button
   4. Copy the credentials from the pop-up into the object below
 */
+/*
 const config = {
   // Insert configuration here
 };
 firebase.initializeApp(config);
-
+*/
 // Get a reference to the database service
 const database = firebase.database();
 
