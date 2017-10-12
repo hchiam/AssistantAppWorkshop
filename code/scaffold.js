@@ -5,6 +5,7 @@ const DialogflowApp = require('actions-on-google').DialogflowApp; // Google Assi
 const firebase = require('firebase');
 
 const googleAssistantRequest = 'google'; // Constant to identify Google Assistant requests
+var todoList = [];
 
 /*
   Set the configuration for your app
@@ -19,8 +20,15 @@ const config = {
 };
 firebase.initializeApp(config);
 
+// Get a reference to the database service
 if (config.databaseURL) {
   const database = firebase.database();
+  // Get database reference
+  var todoListRef = database.ref('todos');
+  // Update todoList when it changes on the database
+  todoListRef.on('value', function(snapshot) {
+    todoList = snapshot.val();
+  });
 }
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
