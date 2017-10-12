@@ -52,6 +52,10 @@ if (item) {
 - `TODO: explanation of code here`
 - Deploy your new code.
 
+# Set up Firebase database 
+
+TODO: change db rules to true, no auth
+
 # Test the intent
 
 ![](screenshots/01-creation-intent/05-create-intent-simulate.png)
