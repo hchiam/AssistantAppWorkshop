@@ -27,6 +27,7 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 - Make the `text` parameter required by checking the checkbox in the leftmost column of the parameter table.
 - Click on the `Define prompts` link in the rightmost column of the parameter table.
 - Add a prompt for when the user doesn't provide any text for the todo, e.g. _"What is the description of your new todo item?"_
+- Add an action name as `create`.
 
 - Click on the `Save` button.
 
@@ -51,10 +52,6 @@ if (item) {
 ```
 - `TODO: explanation of code here`
 - Deploy your new code.
-
-# Set up Firebase database 
-
-TODO: change db rules to true, no auth
 
 # Test the intent
 
