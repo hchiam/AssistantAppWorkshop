@@ -61,6 +61,20 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 ![](screenshots/00-setup/12-dialogflow-inline-editor-deployed.markedup.png)
 - A message will appear when the deployment is finished.
 
+# Enable Firebase Database
+
+![](screenshots/00-setup/17-dialogflow-inline-editor-firebase.markedup.png)
+- Click on the "View execution logs in the Firebase console" link.
+
+![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
+- Click on the Settings button on the sidebar top
+- Click on the "Add Firebase to your web app" icon
+
+![](screenshots/00-setup/19-firebase-database-setup-config.markedup.png)
+- Copy the config content
+- Past this code into the config variable on the Inline Editor (line 19)
+- Click on the "Deploy" button.
+
 # Enable Small Talk
 
 Dialogflow's Small Talk feature allows your application to respond to simple questions like "How are you?"
