@@ -36,7 +36,19 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 - Open the "Fulfillment" section of the intent editing page.
 - Check the "Use webhook" checkbox.
 - Navigate to the Fulfillment page. Don't forget to save your intent first!
-- Insert code to create a new todo item and respond to the user on Step 1 section.
+- Insert code to create a new todo item and respond to the user on 'Step 1' section.
+```
+var item = parameters['text'];
+if (item) {
+  todoListRef.push({
+    status: "incomplete",
+    text: item,
+  });
+  respond('New item added successfully');
+} else {
+  respond('Error. You should say the item name');
+}
+```
 - Deploy your new code.
 
 # Test the intent
