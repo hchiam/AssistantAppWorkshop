@@ -1,6 +1,6 @@
 # Create a complete item intent
 
-![](screenshots/02-show-list/01-show-list.png)
+![](screenshots/03-complete-item/01-complete-item.png)
 - In the Dialogflow tab, navigate to the Intents page.
 - Click on the `Create intent` button.
 - Give your intent a name.
@@ -11,16 +11,33 @@
 - All the items should be in template mode.
 - Enter action name as `complete`.
 - Make the "item-number" parameter required by checking the checkbox in the leftmost column of the parameter table.
-- Click on the "Define prompts" link in the rightmost column of the parameter table.
-- Add a prompt for when the user doesn't provide any number, e.g. "What should the number of the item be?"
+- Click on the `Define prompts` link in the rightmost column of the parameter table.
+- Add a prompt for when the user doesn't provide any number, e.g. `What should the number of the item be?`
 - Check the `Use webhook` checkbox under the Fulfillment section.
 - Click on the `Save` button.
 
 # Set up fulfillment for the intent
 
 - Navigate to the Fulfillment page.
-- Insert code to create a new todo item and respond to the user on `Step 2` section.
+- Insert code to create a new todo item and respond to the user on `Step 3` section.
 ```
+  var itemNumber = parseInt(parameters['item-number']);
+  if (!itemNumber && !isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
+
+  var item;
+  var keys = Object.keys(todoList);
+  if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
+    keys.forEach((key, idx) => {
+      if ((itemNumber - 1) === idx) {
+        todoList[key].status = 'complete';
+        todoListRef.update(todoList);
+        item = todoList[key]
+        return;
+      }
+    });
+  }
+
+  respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
 ```
 - `TODO: Explain code`
 
@@ -28,4 +45,4 @@
 
 # Test the intent
 
-- In the Actions for Google simulator, type or say `Talk to my test app`, then show list.
+- In the Actions for Google simulator, type or say `Talk to my test app`, then complete an item.
