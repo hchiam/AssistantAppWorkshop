@@ -66,10 +66,11 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 ![](screenshots/00-setup/17-dialogflow-inline-editor-firebase.markedup.png)
 - Click on the "View execution logs in the Firebase console" link to open your Firebase page.
 
+By default, Firebase requires authentication for read and write access. However, for the purposes of this tutorial, we will bypass that and open up permissions to our database. **IMPORTANT: Never do this in production**
 ![](screenshots/00-setup/20-firebase-setup-rule.markedup.png)
 - Navigate to the `Database page`
 - Switch to `Rules` tab
-- Change the .read and .write to true. **IMPORTANT: This will give read and write permission to everyone. Anyone can now read from and write to your database. Never do this in production, but it's okay for now.**
+- Change the .read and .write to true.
 - Click on `Publish`
 
 ![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
