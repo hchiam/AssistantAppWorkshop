@@ -41,9 +41,9 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 
 # Test the intent
 
-![](screenshots/01-creation-intent/...)
+![](screenshots/01-creation-intent/05-create-intent-simulate.png)
 - In the Actions for Google simulator, type or say "Talk to my test app", then create a new todo item using the intent you just created.
 
-![](screenshots/01-creation-intent/...)
+![](screenshots/01-creation-intent/06-create-intent-database.markedup.png)
 - Open the Firebase Console and navigate to the Database page.
 - Check that the newly-created todo exists in the database.
