@@ -67,7 +67,7 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 - Click on the "View execution logs in the Firebase console" link to open your Firebase page.
 
 ![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
-- Click on the Settings button on the sidebar top
+- Navigate to the Overview page
 - Click on the "Add Firebase to your web app" icon
 
 ![](screenshots/00-setup/19-firebase-database-setup-config.markedup.png)
