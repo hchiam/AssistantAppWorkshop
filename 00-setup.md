@@ -69,7 +69,7 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 ![](screenshots/00-setup/20-firebase-setup-rule.markedup.png)
 - Navigate to the `Database page`
 - Switch to `Rules` tab
-- Change the .read and .write to true
+- Change the .read and .write to true. **IMPORTANT: This will give read and write permission to everyone. Anyone can now read from and write to your database. Never do this in production, but it's okay for now.**
 - Click on `Publish`
 
 ![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
