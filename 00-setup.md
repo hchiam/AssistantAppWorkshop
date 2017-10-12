@@ -49,7 +49,9 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 
 ![](screenshots/00-setup/10-dialogflow-enable-inline-editor.markedup.png)
 - Enable the Inline Editor.
-- Copy [the scaffold code](code/scaffold.js) into the editor.
+- Replace the code in the editor with [scaffold.js](code/scaffold.js).
+- Switch to the `package.json` tab in the editor.
+- Replace the code in the editor with [package.json](code/package.json).
 
 ![](screenshots/00-setup/11-dialogflow-deploy-inline-editor.markedup.png)
 - Click on the "Deploy" button.
@@ -58,6 +60,20 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 
 ![](screenshots/00-setup/12-dialogflow-inline-editor-deployed.markedup.png)
 - A message will appear when the deployment is finished.
+
+# Setup Firebase Database
+
+![](screenshots/00-setup/17-dialogflow-inline-editor-firebase.markedup.png)
+- Click on the "View execution logs in the Firebase console" link to open your Firebase page.
+
+![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
+- Navigate to the Overview page
+- Click on the "Add Firebase to your web app" icon
+
+![](screenshots/00-setup/19-firebase-database-setup-config.markedup.png)
+- Copy the config content
+- Past this code into the config variable on the Inline Editor (line 19)
+- Click on the "Deploy" button.
 
 # Enable Small Talk
 

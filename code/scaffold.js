@@ -5,6 +5,7 @@ const DialogflowApp = require('actions-on-google').DialogflowApp; // Google Assi
 const firebase = require('firebase');
 
 const googleAssistantRequest = 'google'; // Constant to identify Google Assistant requests
+var todoList = [];
 
 /*
   Set the configuration for your app
@@ -13,13 +14,22 @@ const googleAssistantRequest = 'google'; // Constant to identify Google Assistan
   3. Click on the 'Add Firebase to your web app' button
   4. Copy the credentials from the pop-up into the object below
 */
+
 const config = {
   // Insert configuration here
 };
 firebase.initializeApp(config);
 
 // Get a reference to the database service
-const database = firebase.database();
+if (config.databaseURL) {
+  const database = firebase.database();
+  // Get database reference
+  var todoListRef = database.ref('todos');
+  // Update todoList when it changes on the database
+  todoListRef.on('value', function(snapshot) {
+    todoList = snapshot.val();
+  });
+}
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   console.log('Request headers: ' + JSON.stringify(request.headers));
