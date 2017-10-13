@@ -27,6 +27,10 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 
 - Create new intent for completing a to-do item using similar steps
 
+## [Step 4: Update Item](./04-update-item.md)
+
+- Create new intent for update a to-do item using similar steps
+
 # Resources and Takeaways
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
 - [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
