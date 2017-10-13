@@ -38,6 +38,10 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 - Setup `Fulfillment`
 - Test the application through the Actions on Google simulator
 
+## [Step 4: Update Item](./04-update-item.md)
+
+- Create new intent for update a to-do item using similar steps
+
 # Resources and Takeaways
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
 - [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
@@ -46,3 +50,4 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 - [Overview of Natural Language Processing](https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_natural_language_processing.htm)
 - [A UXer's guide to Voice UIs](https://uxplanet.org/a-uxers-guide-to-voice-uis-803188d67b0f)
 - [The Machine is Learning](https://www.theverge.com/2017/5/17/15651246/google-assistant-iphone-ai-future-interface-io-2017)
+- [Siri, Cortana, Alexa and Google Assistant are just the beginning: Voice is the future](http://www.zdnet.com/article/siri-cortana-alexa-and-google-assistant-are-just-the-beginning-voice-is-the-future/)
