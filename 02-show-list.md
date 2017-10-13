@@ -30,7 +30,7 @@ list = list.slice(0, -4);
 // send the response
 respond(`Here is your list:  \n${list}`);
 ```
-- Here, we are iterating over all the todo list and building a large string for output.
+- Here, we are iterating over the entire todo list and building a large string for output.
 - We use the `respond` function to send a response to Google Assistant.
 - Deploy your new code.
 
