@@ -50,8 +50,12 @@ if (item) {
   respond('Error. You should say the item name');
 }
 ```
-- `TODO: explanation of code here`
 - Deploy your new code.
+
+Here is how the code works.
+- `var item = parameters[text]` references the parameter we just created under the `Action` section.
+- `if (item)` checks if item is non null. If it is non null, then we push a to-do item with a completion status and text to Firebase using `todoListRef.push`, where `todoListRef` is a reference to our Firebase database. `respond('...')` then tells Google Assistant to respond with a success message.
+- If item is null, then `respond('...')` will tell Google Assistant to respond with an error message.
 
 # Test the intent
 
