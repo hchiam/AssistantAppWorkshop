@@ -1,6 +1,6 @@
 # Create a update item intent
 
-![](screenshots/02-show-list/04-update-item-intent.png)
+![](screenshots/04-update-item/04-update-item-intent.png)
 - In the Dialogflow tab, navigate to the Intents page.
 - Click on the `Create intent` button.
 - Give your intent a name.
