@@ -28,9 +28,9 @@
   if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
     keys.forEach((key, idx) => {
       if ((itemNumber - 1) === idx) {
-        todoList[key].text = itemText;
-        todoListRef.update(todoList);
-        item = todoList[key]
+        item = todoList[key];
+        item.text = itemText;
+        database.ref(`todos/${key}`).update(item);
         return;
       }
     });

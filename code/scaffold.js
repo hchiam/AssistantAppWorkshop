@@ -19,10 +19,11 @@ const config = {
   // Insert configuration here
 };
 firebase.initializeApp(config);
+var database;
 
 // Get a reference to the database service
 if (config.databaseURL) {
-  const database = firebase.database();
+  database = firebase.database();
   // Get database reference
   var todoListRef = database.ref('todos');
   // Update todoList when it changes on the database
