@@ -22,11 +22,21 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 
 ## [Step 2: Show List](./02-show-list.md)
 
-- Create new intent for showing to-dos using similar steps
+- Create new intent for showing to-dos
+- Give a `Name`
+- Give expressions in `User says`
+- Setup `Actions`
+- Setup `Fulfillment`
+- Test the application through the Actions on Google simulator
 
 ## [Step 3: Complete Item](./03-complete-item.md)
 
-- Create new intent for completing a to-do item using similar steps
+- Create new intent for completing an item
+- Give a `Name`
+- Give expressions in `User says`
+- Setup `Actions`
+- Setup `Fulfillment`
+- Test the application through the Actions on Google simulator
 
 # Resources and Takeaways
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
