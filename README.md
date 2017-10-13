@@ -9,3 +9,12 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 - Integrate the Dialogflow project with Firebase through the Inline Editor
 - Enable Dialogflow's Small Talk feature
 - Test the application through the Actions on Google simulator
+
+## [Step 1: Create Intent](./01-creation-intent.md)
+
+- Create new intent
+- Given `Name`
+- Given `User says`
+- Setup `Actions`
+- Setup `Fulfillment`
+- Test the application through the Actions on Google simulator
