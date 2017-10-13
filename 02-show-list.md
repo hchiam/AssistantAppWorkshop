@@ -16,23 +16,24 @@
 # Set up fulfillment for the intent
 
 - Navigate to the Fulfillment page.
-- Insert code to create a new todo item and respond to the user on `Step 2` section.
+- Insert code to create a new todo item and respond to the user. This code should go after the comment section `// Step 2`.
 ```
-  if (!todoList || Object.keys(todoList).length === 0) respond('Your list is empty');
-  var list = '';
-  // concat all the item into a string
-  Object.keys(todoList).forEach(id => {
-    list += todoList[id].text + ',  \n';
-  });
-  // remove the last comma
-  list = list.slice(0, -4);
-  // send the response
-  respond(`Here is your list:  \n${list}`);
+// check if the list is empty
+if (!todoList || Object.keys(todoList).length === 0) return "Your list is empty";
+var list = "";
+// concat all the item into a string
+Object.keys(todoList).forEach(id => {
+  list += todoList[id].text + ",  \n";
+});
+// remove the last comman
+list = list.slice(0, -4);
+// send the response
+respond(`Here is your list:  \n${list}`);
 ```
-- `TODO: Explain code`
-
+- Here, we are iterating over all the todo list and building a large string for output.
+- We use the `respond` function to send a response to Google Assistant.
 - Deploy your new code.
 
 # Test the intent
 
-- In the Actions for Google simulator, type or say `Talk to my test app`, then show list.
+- In the Actions for Google simulator, type or say _"Talk to my test app"_, then _"Show todo list"_.
