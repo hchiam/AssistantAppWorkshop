@@ -26,3 +26,12 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 ## [Step 3: Complete Item](./03-complete-item.md)
 
 - Create new intent for completing a to-do item using similar steps
+
+# Resources and Takeaways
+- [Apple SiriKit](https://developer.apple.com/sirikit/)
+- [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
+- [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit)
+- [Natural Language Processing with Deep Learning - Stanford University](https://www.youtube.com/watch?v=OQQ-W_63UgQ)
+- [Overview of Natural Language Processing](https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_natural_language_processing.htm)
+- [A UXer's guide to Voice UIs](https://uxplanet.org/a-uxers-guide-to-voice-uis-803188d67b0f)
+- [The Machine is Learning](https://www.theverge.com/2017/5/17/15651246/google-assistant-iphone-ai-future-interface-io-2017)
