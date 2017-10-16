@@ -42,8 +42,6 @@ todoListRef.once('value', snapshot => {
     }
 });
 ```
-- Here, we are iterating over the entire todo list and building a large string for output.
-- We use the `respond` function to send a response to Google Assistant.
 - Deploy your new code.
 
 # Test the intent
