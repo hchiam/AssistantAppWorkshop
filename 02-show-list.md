@@ -4,7 +4,7 @@
 - In the Dialogflow tab, navigate to the Intents page.
 - Click on the `Create intent` button.
 - Give your intent a name.
-- In the `User says` section, add some expressions that you think people would use to show the to-do list. Here are some examples:
+- In the `User says` section, add some expressions that you think people would use to show the todo list. Here are some examples:
   - Show list
   - Show me my todos
   - What's left on my todo list?

@@ -1,4 +1,4 @@
-Intents are the backbone of Dialogflow projects. Each intent describes a mapping between what a user says and what action should be taken by your software. In this step, we'll write a "Create item" intent that is invoked when a user wants to add items to their to-do list.
+Intents are the backbone of Dialogflow projects. Each intent describes a mapping between what a user says and what action should be taken by your software. In this step, we'll write a "Create item" intent that is invoked when a user wants to add items to their todo list.
 
 # Create a new intent
 
@@ -56,15 +56,15 @@ if (item) {
 
 Here is how the code works.
 - `var item = parameters[text]` references the parameter we just created under the `Action` section.
-- `if (item)` checks if item is non null. If it is non null, then we push a to-do item with a completion status and text to Firebase using `todoListRef.push`, where `todoListRef` is a reference to our Firebase database. `respond('...')` then tells Google Assistant to respond with a success message.
+- `if (item)` checks if item is non null. If it is non null, then we push a todo item with a completion status and text to Firebase using `todoListRef.push`, where `todoListRef` is a reference to our Firebase database. `respond('...')` then tells Google Assistant to respond with a success message.
 - If item is null, then `respond('...')` will tell Google Assistant to respond with an error message.
 
 # Test the intent
 
 ![](screenshots/01-create-item/05-create-intent-simulate.png)
 - Open the [Actions for Google console](https://console.actions.google.com), select your project, and navigate to the Simulator page.
-- In the Actions for Google simulator, type or say _"Talk to my test app"_, then create a new to-do using the intent you just created.
+- In the Actions for Google simulator, type or say _"Talk to my test app"_, then create a new todo using the intent you just created.
 
 ![](screenshots/01-create-item/06-create-intent-database.markedup.png)
 - Open the [Firebase Console](https://console.firebase.google.com), select your project, and navigate to the Database page.
-- Check that the newly-created to-do exists in the database.
+- Check that the newly-created todo exists in the database.

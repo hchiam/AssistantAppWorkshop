@@ -1,10 +1,10 @@
-Use Actions on Google, Dialogflow, and Firebase to create a to-do application with a conversational UI.
+Use Actions on Google, Dialogflow, and Firebase to create a todo application with a conversational UI.
 
 # Steps
 
 In Step 0, you'll set up a new Actions on Google application, backed by Dialogflow and Firebase.
 
-In Steps 1 through 4, you'll add four pieces of functionality to your application: creating new to-dos, listing existing ones, and updating a to-do's status and text.
+In Steps 1 through 4, you'll add four pieces of functionality to your application: creating new todos, listing existing ones, and updating a todo's status and text.
 
 After each step, you'll get to test your application's new functionality through the Actions on Google simulator.
 
@@ -18,21 +18,21 @@ After each step, you'll get to test your application's new functionality through
 
 ## [Step 1: Create Item](./01-create-item.md)
 
-- Create an intent that creates a new to-do
-- Change the project's Firebase Function to add the to-do to Firebase Database
+- Create an intent that creates a new todo
+- Change the project's Firebase Function to add the todo to Firebase Database
 
 ## [Step 2: Show List](./02-show-list.md)
 
-- Create an intent that lists the to-dos stored in Firebase Database
+- Create an intent that lists the todos stored in Firebase Database
 
 ## [Step 3: Complete Item](./03-complete-item.md)
 
-- Create an intent that marks a to-do as completed
-- Change the project's Firebase Function to update the to-do's status in Firebase Database
+- Create an intent that marks a todo as completed
+- Change the project's Firebase Function to update the todo's status in Firebase Database
 
 ## [Step 4: Update Item](./04-update-item.md)
 
-- Create an intent that updates the text of a to-do
+- Create an intent that updates the text of a todo
 - Change the project's Firebase Function to store the updated text in Firebase Database
 
 # Resources and Takeaways
