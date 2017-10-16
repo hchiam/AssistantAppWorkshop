@@ -16,7 +16,7 @@
   - Update a todo
 - Enter action name as `update`.
 - Make the `index` and `text` parameters required by checking the checkbox in the leftmost column of the parameter table.
-- Add a prompt for when the user doesn't provide any number or text
+- Add prompts for when the user doesn't provide one of the parameters.
 - Check the `Use webhook` checkbox under the Fulfillment section.
 - Click on the `Save` button.
 
@@ -46,7 +46,6 @@ todoListRef.once('value', snapshot => {
     respond(`Item #${itemNumber} updated to ${itemText}`);
 });
 ```
-- `TODO: explanation of code here`
 - Deploy your new code.
 
 # Test the intent
