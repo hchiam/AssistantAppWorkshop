@@ -28,13 +28,16 @@ todoListRef.once('value', snapshot => {
     if (!todoList || Object.keys(todoList).length === 0){
         respond("Your todo list is empty.");
     } else {
+        var index = 1;
         // Create a list of todos, with the completed ones marked with [DONE].
         const listText = Object.keys(todoList)
             .map(key => {
                 const { text, status } = todoList[key];
-                return `${status === "complete" ? "[DONE] " : ""}${text}`;
+                const line = `${index}. ${text}${status === "complete" ? " [DONE]" : ""}`;
+                index++;
+                return line;
             })
-            .join(',\n');
+            .join('\n');
         respond(`Here are your todos: ${listText}`);
     }
 });
@@ -44,3 +47,5 @@ todoListRef.once('value', snapshot => {
 # Test the intent
 
 - In the Actions for Google simulator, type or say _"Talk to my test app"_, then _"Show todo list"_.
+
+[Move on to the next step: Complete Item](./03-complete-item.md)

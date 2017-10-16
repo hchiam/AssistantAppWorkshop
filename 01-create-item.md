@@ -71,3 +71,5 @@ if (text) {
 ![](screenshots/01-create-item/06-create-intent-database.markedup.png)
 - Open the [Firebase Console](https://console.firebase.google.com), select your project, and navigate to the Database page.
 - Check that the newly-created todo exists in the database.
+
+[Move on to the next step: Show List](./02-show-list.md)
