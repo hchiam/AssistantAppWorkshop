@@ -22,7 +22,10 @@
 - Insert code to create a new todo item and respond to the user. This code should go after the comment section `// Step 2`.
 ```
 // check if the list is empty
-if (!todoList || Object.keys(todoList).length === 0) return "Your list is empty";
+if (!todoList || Object.keys(todoList).length === 0){
+  respond("Your list is empty");
+  return;
+}
 var list = "";
 // concat all the item into a string
 Object.keys(todoList).forEach(id => {
