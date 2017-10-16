@@ -25,33 +25,34 @@
 # Set up fulfillment for the intent
 
 - Navigate to the Fulfillment page.
-- Insert code to create a new todo item and respond to the user on `Step 3` section.
+- Insert code to create a new todo item and respond to the user in the `Step 3` section.
 ```js
-var itemNumber = parseInt(parameters['index']);
-if (!itemNumber || isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
-
-todoListRef.once('value', snapshot => {
-    var todoList = snapshot.val();
-    var item;
-    var keys = Object.keys(todoList);
-    if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
-        keys.forEach((key, idx) => {
-            if ((itemNumber - 1) === idx) {
-                item = todoList[key];
-                item.status = 'complete';
-                database.ref(`todos/${key}`).update(item);
-                return;
-            }
-        });
-    }
-
-    respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
-});
+// itemNumber is the index of the specified todo, converted to an integer.
+const itemNumber = parseInt(parameters.index);
+if (!itemNumber || isNaN(itemNumber)) {
+    respond('Error: couldn\'t parse the item number.');
+} else {
+    // Read the todo list out of the database, then call the callback with the value as argument.
+    todoListRef.once('value', snapshot => {
+        const todoList = snapshot.val();
+        // If todoList is null or undefined, Object.keys(todoList) will throw an error. In this
+        // case, we default to an empty object so that keys will be the empty array.
+        const keys = Object.keys(todoList || {});
+        // Only proceed if todoList exists and itemNumber is between one and the number
+        // of items in the todo list.
+        if (todoList && itemNumber > 0 && itemNumber <= keys.length) {
+            const key = keys[itemNumber - 1];
+            let item = todoList[key];
+            item.status = 'complete';
+            // Update the item's status in the database.
+            database.ref(`todos/${key}`).update(item);
+            respond(`Completed todo number ${itemNumber}`);
+        } else {
+            respond(`There is no todo number ${itemNumber}.`);
+        }
+    });
+}
 ```
-- Here, we are iterating over the todo list until we find the desired todo item
-- Once the item is found, its status is updated to `complete`, and the database is updated
-- If the item was not found, an error will be returned
-
 - Deploy your new code.
 
 # Test the intent
