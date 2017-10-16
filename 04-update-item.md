@@ -35,7 +35,7 @@
       if ((itemNumber - 1) === idx) {
         item = todoList[key];
         item.text = itemText;
-        database.ref(`todos/${key}`).update(item);
+        firebase.database().ref(`todos/${key}`).update(item);
         return;
       }
     });
