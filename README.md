@@ -8,6 +8,9 @@ In Steps 1 through 4, you'll add four pieces of functionality to your applicatio
 
 After each step, you'll get to test your application's new functionality through the Actions on Google simulator.
 
+## [Checkpoints](./checkpoints.md)
+There are checkpoints available if you wish to get the state of the Dialogflow intents after each step.
+
 ## [Step 0: Setup](./00-setup.md)
 
 - Create an Actions on Google project
@@ -35,7 +38,7 @@ After each step, you'll get to test your application's new functionality through
 - Create an intent that updates the text of a todo
 - Change the project's Firebase Function to store the updated text in Firebase Database
 
-# Resources and Takeaways
+# Resources
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
 - [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
 - [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit)
