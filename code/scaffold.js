@@ -114,24 +114,24 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const actionHandlers = {
         'create': () => {
             // Step 1
-            // Create a new to-do item from the given text
-            // The text of the new to-do item is stored in parameters.text
+            // Create a new todo item from the given text
+            // The text of the new todo item is stored in parameters.text
         },
 
         'show': () => {
             // Step 2
-            // List the uncompleted to-do items created so far
+            // List the uncompleted todo items created so far
         },
 
         'complete': () => {
             // Step 3
-            // Complete a to-do item
+            // Complete a todo item
             // The index of the item to complete is stored in parameters.index
         },
 
         'update': () => {
             // Step 4
-            // Update a to-do item with the given text
+            // Update a todo item with the given text
             // The updated text is stored in parameters.text
             // The index of the item to update is stored in parameters.index
         },
@@ -149,5 +149,4 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     // Run the proper handler function to handle the request from Dialogflow
     actionHandlers[action]();
-
 });

@@ -42,7 +42,7 @@
 
 # Enable Inline Editor
 
-The Inline Editor allows you to deploy and edit Firebase Functions from your browser. We'll use Firebase Functions to create, edit, and delete to-dos that we'll store in Firebase Database.
+The Inline Editor allows you to deploy and edit Firebase Functions from your browser. We'll use Firebase Functions to create, edit, and delete todos that we'll store in Firebase Database.
 
 ![](screenshots/00-setup/09-dialogflow-integrations-page.markedup.png)
 - Click on the Fulfillment page in the menu on the left.
@@ -115,3 +115,5 @@ Dialogflow's Small Talk feature allows your application to respond to simple que
 - Make sure that your phone is signed in to the same Google account that you've used to create the application.
 - Touch and hold the Home button or say "OK Google" to activate the Google Assistant.
 - Type or say "Talk to my test app".
+
+[Move on to the next step: Create Item](./01-create-item.md)

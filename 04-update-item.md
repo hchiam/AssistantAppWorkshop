@@ -4,7 +4,7 @@
 - In the Dialogflow tab, navigate to the Intents page.
 - Click on the `Create intent` button.
 - Give your intent a name.
-- In the `User says` section, add some expressions that you think people would use to show the to-do list. Here are some examples:
+- In the `User says` section, add some expressions that you think people would use to show the todo list. Here are some examples:
   - Update item `@sys.number-integer:index` with `@sys.any:text`
   - Change `@sys.number-integer:index` item to `@sys.any:text`
   - Update `@sys.number-integer:index` item to `@sys.any:text`
@@ -42,9 +42,8 @@ todoListRef.once('value', snapshot => {
             }
         });
     }
-    
+
     respond(`Item #${itemNumber} updated to ${itemText}`);
-    
 });
 ```
 - `TODO: explanation of code here`
