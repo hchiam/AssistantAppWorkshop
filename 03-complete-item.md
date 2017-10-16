@@ -45,7 +45,9 @@
 
   respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
 ```
-- `TODO: Explain code`
+- Here, we are iterating over the todo list until we find the desired todo item
+- Once the item is found, its status is updated to `complete`, and the database is updated
+- If the item was not found, an error will be returned
 
 - Deploy your new code.
 
