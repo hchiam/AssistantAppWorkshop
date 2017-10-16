@@ -25,18 +25,8 @@ var database;
 var todoListRef;
 
 if (config.databaseURL) {
-<<<<<<< HEAD
     database = firebase.database();
     todoListRef = database.ref('todos');
-=======
-  database = firebase.database();
-  // Get database reference
-  var todoListRef = database.ref('todos');
-  // Update todoList when it changes on the database
-  todoListRef.on('value', function(snapshot) {
-    todoList = snapshot.val();
-  });
->>>>>>> cc3adfd2c280ae895bb9788d6315bdb7c3198b10
 }
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
