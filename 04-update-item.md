@@ -28,20 +28,24 @@
 var itemNumber = parseInt(parameters['index']);
 var itemText = parameters['text'];
 
-var item;
-var keys = Object.keys(todoList);
-if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
-  keys.forEach((key, idx) => {
-    if ((itemNumber - 1) === idx) {
-      item = todoList[key];
-      item.text = itemText;
-      firebase.database().ref(`todos/${key}`).update(item);
-      return;
+todoListRef.once('value', function(snapshot) {
+    var todoList = snapshot.val();
+    var item;
+    var keys = Object.keys(todoList);
+    if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
+        keys.forEach((key, idx) => {
+            if ((itemNumber - 1) === idx) {
+                item = todoList[key];
+                item.text = itemText;
+                firebase.database().ref(`todos/${key}`).update(item);
+                return;
+            }
+        });
     }
-  });
-}
-
-respond(`Item #${itemNumber} updated to ${itemText}`);
+    
+    respond(`Item #${itemNumber} updated to ${itemText}`);
+    
+});
 ```
 - `TODO: explanation of code here`
 - Deploy your new code.
