@@ -2,14 +2,18 @@
 
 Click on the link and click download to download the file
 
-- [Step 1 (Create item) intents](./code/intents/intents.step.1.zip)
-- [Step 1 (Create item) fullfilment](./code/functions/index.step1.js)
-- [Step 2 (Show list) intents](./code/intents/intents.step.1.zip)
-- [Step 2 (Show list) fullfilment](./code/functions/index.step2.js)
-- [Step 3 (Complete item) intents](./code/intents/intents.step.1.zip)
-- [Step 3 (Complete item) fullfilment](./code/functions/index.step3.js)
-- [Step 4 (Update item) intents](./code/intents/intents.step.1.zip)
-- [Step 4 (Update item) fullfilment](./code/functions/index.step4.js)
+- Step 1 (Create item)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step1.js)
+- Step 2 (Show list)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step2.js)
+- Step 3 (Complete item)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step3.js)
+- Step 4 (Update item)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step4.js)
 
 ## Steps
 
