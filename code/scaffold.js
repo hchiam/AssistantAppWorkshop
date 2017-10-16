@@ -149,5 +149,4 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     // Run the proper handler function to handle the request from Dialogflow
     actionHandlers[action]();
-
 });
