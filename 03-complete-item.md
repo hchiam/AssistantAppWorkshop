@@ -27,23 +27,23 @@
 - Navigate to the Fulfillment page.
 - Insert code to create a new todo item and respond to the user on `Step 3` section.
 ```js
-  var itemNumber = parseInt(parameters['index']);
-  if (!itemNumber || isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
+var itemNumber = parseInt(parameters['index']);
+if (!itemNumber || isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
 
-  var item;
-  var keys = Object.keys(todoList);
-  if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
-    keys.forEach((key, idx) => {
-      if ((itemNumber - 1) === idx) {
-        item = todoList[key];
-        item.status = 'complete';
-        database.ref(`todos/${key}`).update(item);
-        return;
-      }
-    });
-  }
+var item;
+var keys = Object.keys(todoList);
+if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
+  keys.forEach((key, idx) => {
+    if ((itemNumber - 1) === idx) {
+      item = todoList[key];
+      item.status = 'complete';
+      database.ref(`todos/${key}`).update(item);
+      return;
+    }
+  });
+}
 
-  respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
+respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
 ```
 - `TODO: Explain code`
 
