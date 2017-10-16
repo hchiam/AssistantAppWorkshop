@@ -12,7 +12,7 @@
   - Show all todos
   - Show todo list
   - Show items
-- Enter action name as `show`.
+- Set the action name to `show`.
 - Check the `Use webhook` checkbox under the Fulfillment section.
 - Click on the `Save` button.
 
