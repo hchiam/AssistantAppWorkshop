@@ -1,3 +1,13 @@
+# Contents
+- [Create an Actions on Google Project](#create-an-actionson-google-project)
+- [Connect the Actions on Google project to Dialogflow](#connect-the-actions-google-project-to-dialogflow)
+- [Enable Inline Editor](#enable-inline-editor)
+- [Setup Firebase Database](#setup-firebase-database)
+- [Enable Small Talk](#enable-small-talk)
+- [Bonus: Customize Your Application's small talk](#bonus-customize-your-applications-small-talk)
+- [Test your Actions on Google project](#test-your-actions-on-google-project)
+- [Bonus: Test out your app on your smartphone!](#bonus-test-out-your-app-on-your-smartphone)
+
 # Create an Actions on Google project
 
 ![](screenshots/00-setup/01-actions-on-google-homepage.markedup.png)
