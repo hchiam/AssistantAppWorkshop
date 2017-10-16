@@ -42,9 +42,8 @@ todoListRef.once('value', snapshot => {
             }
         });
     }
-    
+
     respond(`Item #${itemNumber} updated to ${itemText}`);
-    
 });
 ```
 - `TODO: explanation of code here`

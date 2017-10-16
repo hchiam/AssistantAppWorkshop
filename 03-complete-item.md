@@ -46,7 +46,6 @@ todoListRef.once('value', snapshot => {
     }
 
     respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
-
 });
 ```
 - Here, we are iterating over the todo list until we find the desired todo item
