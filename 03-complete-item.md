@@ -30,7 +30,7 @@
 var itemNumber = parseInt(parameters['index']);
 if (!itemNumber || isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
 
-todoListRef.once('value', function(snapshot) {
+todoListRef.once('value', snapshot => {
     var todoList = snapshot.val();
     var item;
     var keys = Object.keys(todoList);

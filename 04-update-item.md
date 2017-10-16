@@ -28,7 +28,7 @@
 var itemNumber = parseInt(parameters['index']);
 var itemText = parameters['text'];
 
-todoListRef.once('value', function(snapshot) {
+todoListRef.once('value', snapshot => {
     var todoList = snapshot.val();
     var item;
     var keys = Object.keys(todoList);
