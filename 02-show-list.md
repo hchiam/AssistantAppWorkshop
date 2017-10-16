@@ -6,7 +6,10 @@
 - Give your intent a name.
 - In the `User says` section, add some expressions that you think people would use to show the to-do list. Here are some examples:
   - Show list
-  - Show items list
+  - Show me my todos
+  - What's left on my todo list?
+  - What's on my todo list?
+  - Show all todos
   - Show todo list
   - Show items
 - Enter action name as `show`.
