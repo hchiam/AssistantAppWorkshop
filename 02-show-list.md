@@ -26,7 +26,7 @@ todoListRef.once('value', snapshot => {
     const todoList = snapshot.val();
     // Check if the list is empty.
     if (!todoList || Object.keys(todoList).length === 0){
-        respond("Your list is empty");
+        respond("Your todo list is empty.");
     } else {
         // Create a list of todos, with the completed ones marked with [DONE].
         const listText = Object.keys(todoList)
