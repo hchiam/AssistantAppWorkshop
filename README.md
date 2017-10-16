@@ -38,7 +38,7 @@ There are checkpoints available if you wish to get the state of the Dialogflow i
 - Create an intent that updates the text of a todo
 - Change the project's Firebase Function to store the updated text in Firebase Database
 
-# Resources and Takeaways
+# Resources
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
 - [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
 - [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit)
