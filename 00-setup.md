@@ -115,3 +115,5 @@ Dialogflow's Small Talk feature allows your application to respond to simple que
 - Make sure that your phone is signed in to the same Google account that you've used to create the application.
 - Touch and hold the Home button or say "OK Google" to activate the Google Assistant.
 - Type or say "Talk to my test app".
+
+[Move on to the next step: Create Item](./01-create-item.md)

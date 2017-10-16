@@ -57,3 +57,5 @@ todoListRef.once('value', snapshot => {
 # Test the intent
 
 - In the Actions for Google simulator, type or say `Talk to my test app`, then complete an item.
+
+[Move on to the next step: Update Item](./04-update-item.md)

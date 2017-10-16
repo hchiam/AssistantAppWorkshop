@@ -47,3 +47,5 @@ todoListRef.once('value', snapshot => {
 # Test the intent
 
 - In the Actions for Google simulator, type or say _"Talk to my test app"_, then _"Show todo list"_.
+
+[Move on to the next step: Complete Item](./03-complete-item.md)
