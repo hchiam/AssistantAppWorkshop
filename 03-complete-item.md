@@ -26,7 +26,7 @@
 
 - Navigate to the Fulfillment page.
 - Insert code to create a new todo item and respond to the user on `Step 3` section.
-```
+```js
   var itemNumber = parseInt(parameters['index']);
   if (!itemNumber || isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
 

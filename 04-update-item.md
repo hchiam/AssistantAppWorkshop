@@ -24,7 +24,7 @@
 
 - Navigate to the Fulfillment page.
 - Insert code to create a new todo item and respond to the user. This code should go after the comment section `// Step 4`.
-```
+```js
   var itemNumber = parseInt(parameters['index']);
   var itemText = parameters['text'];
 

@@ -20,7 +20,7 @@
 
 - Navigate to the Fulfillment page.
 - Insert code to create a new todo item and respond to the user. This code should go after the comment section `// Step 2`.
-```
+```js
 // check if the list is empty
 if (!todoList || Object.keys(todoList).length === 0){
   respond("Your list is empty");
