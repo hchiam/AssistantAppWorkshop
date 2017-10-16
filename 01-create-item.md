@@ -1,4 +1,4 @@
-Intents are the backbone of Dialogflow projects. Each intent describes a mapping between what a user says and what action should be taken by your software. In this step, we'll create an intent that will allow you to add new items to your todo list.
+Intents are the backbone of Dialogflow projects. Each intent describes a mapping between what a user says and what action should be taken by your software. In this step, we'll write a "Create item" intent that is invoked when a user wants to add items to their to-do list.
 
 # Create a new intent
 
