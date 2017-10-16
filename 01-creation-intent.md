@@ -9,20 +9,23 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 ![](screenshots/01-creation-intent/02-create-intent-name-user-says.markedup.png)
 - Give your intent a name. This can be anything. We are calling ours `Add item`.
 - In the `User says` section, add some expressions that you think people would use to create a new item. Here are some examples:
-  - Create new item
+  - Create a new todo
   - New item
   - New todo
   - Make a new item
   - Create a todo
+  - Add a new todo
+  - Add new item
 - Your examples don't have to be comprehensive: Dialogflow automatically combines aspects of the examples you provide to generate new ones. For example, given the examples above, Dialogflow will also invoke your new intent when the user says _"Make new todo"_.
 
 ![](screenshots/01-creation-intent/03-create-intent-parameter.markedup.png)
 - Click on the quotation mark symbol (`"`) in the left of the `User says` input box. It should be replaced by an `@` symbol.
 - You're now in template mode. Try entering these templates:
   - Add `@sys.any:text` as a new todo
-  - Create an item to `@sys.any:text`
+  - Add `@sys.any:text` to the list
+  - Create a todo to `@sys.any:text`
   - Make a todo with description `@sys.any:text`
-- `@sys.any:text` should be highlighted in both examples. This means that, if a user enters _"Create an item to wash the dishes"_, the intent will be invoked with the parameter `text` set to `wash the dishes`.
+- `@sys.any:text` should be highlighted in both examples. This means that, if a user enters _"Create a todo to wash the dishes"_, the intent will be invoked with the parameter `text` set to `wash the dishes`.
 - You can see a list of the intent's parameters in the `Action` section. Right now, you only have one parameter: `text`.
 - Make the `text` parameter required by checking the checkbox in the leftmost column of the parameter table.
 - Click on the `Define prompts` link in the rightmost column of the parameter table.
