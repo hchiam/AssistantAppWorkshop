@@ -28,17 +28,22 @@ todoListRef.once('value', snapshot => {
     if (!todoList || Object.keys(todoList).length === 0){
         respond("Your list is empty");
     } else {
+        var index = 1;
         // Create a list of todos, with the completed ones marked with [DONE].
         const listText = Object.keys(todoList)
             .map(key => {
                 const { text, status } = todoList[key];
-                return `${status === "complete" ? "[DONE] " : ""}${text}`;
+                const line = `${index}. ${text}${status === "complete" ? " [DONE]" : ""}`;
+                index++;
+                return line;
             })
             .join(',\n');
         respond(`Here are your todos: ${listText}`);
     }
 });
 ```
+- Here, we are iterating over the entire todo list and building a large string for output.
+- We use the `respond` function to send a response to Google Assistant.
 - Deploy your new code.
 
 # Test the intent
