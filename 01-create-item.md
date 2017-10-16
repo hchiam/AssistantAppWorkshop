@@ -41,23 +41,26 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 - Navigate to the `Fulfillment` page. Don't forget to save your intent first!
 - Insert code to create a new todo item and respond to the user on 'Step 1' section.
 ```js
-var item = parameters['text'];
-if (item) {
+// text is the text of the new todo being created.
+const text = parameters.text;
+if (text) {
+    // Add the new todo to the database as a child of the existing todo node.
     todoListRef.push({
         status: "incomplete",
-        text: item,
+        text,
     });
-    respond('New item added successfully');
+    // Respond to indicate the todo was created successfully.
+    respond(`OK, I just added "${text}".`);
 } else {
-    respond('Error. You should say the item name');
+    // If text is falsy, respond with an error message.
+    // If you're seeing this response, check that the text parameter in the intent
+    // is required and that you've specified a prompt for it. If you've taken these
+    // steps, Dialogflow should prompt the user to specify the text, rather than
+    // making a request to your project's Firebase Function without the text parameter.
+    respond('Error: no item name specified.');
 }
 ```
 - Deploy your new code.
-
-Here is how the code works.
-- `var item = parameters[text]` references the parameter we just created under the `Action` section.
-- `if (item)` checks if item is non null. If it is non null, then we push a todo item with a completion status and text to Firebase using `todoListRef.push`, where `todoListRef` is a reference to our Firebase database. `respond('...')` then tells Google Assistant to respond with a success message.
-- If item is null, then `respond('...')` will tell Google Assistant to respond with an error message.
 
 # Test the intent
 
