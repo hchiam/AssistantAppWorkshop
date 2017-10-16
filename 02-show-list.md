@@ -21,27 +21,22 @@
 - Navigate to the Fulfillment page.
 - Insert code to create a new todo item and respond to the user. This code should go after the comment section `// Step 2`.
 ```js
+// Read the todo list out of the database, then call the callback with the value as argument.
 todoListRef.once('value', snapshot => {
-    var todoList = snapshot.val();
-    // check if the list is empty
+    const todoList = snapshot.val();
+    // Check if the list is empty.
     if (!todoList || Object.keys(todoList).length === 0){
         respond("Your list is empty");
-        return;
+    } else {
+        // Create a list of todos, with the completed ones marked with [DONE].
+        const listText = Object.keys(todoList)
+            .map(key => {
+                const { text, status } = todoList[key];
+                return `${status === "complete" ? "[DONE] " : ""}${text}`;
+            })
+            .join(',\n');
+        respond(`Here are your todos: ${listText}`);
     }
-    var list = "";
-    // concat all the item into a string
-    Object.keys(todoList).forEach(id => {
-        var item = todoList[id];
-        if (item.status === "complete") {
-            list += "[DONE] " + item.text + ",  \n";
-        } else {
-            list += item.text + ",  \n";
-        }
-    });
-    // remove the last comman
-    list = list.slice(0, -4);
-    // send the response
-    respond(`Here is your list:  \n${list}`);
 });
 ```
 - Here, we are iterating over the entire todo list and building a large string for output.
