@@ -11,7 +11,7 @@ Use Actions on Google, Dialogflow, and Firebase to create a to-do application wi
 - Enable Dialogflow's Small Talk feature
 - Test the application through the Actions on Google simulator
 
-## [Step 1: Creation Intent](./01-creation-intent.md)
+## [Step 1: Create Item](./01-create-item.md)
 
 - Create new intent for creating new to-dos
 - Give a `Name`

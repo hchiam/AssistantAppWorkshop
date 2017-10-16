@@ -2,11 +2,11 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 
 # Create a new intent
 
-![](screenshots/01-creation-intent/01-create-intent.markedup.png)
+![](screenshots/01-create-item/01-create-intent.markedup.png)
 - Navigate to the Intents page.
 - Click on the `Create intent` button.
 
-![](screenshots/01-creation-intent/02-create-intent-name-user-says.markedup.png)
+![](screenshots/01-create-item/02-create-intent-name-user-says.markedup.png)
 - Give your intent a name. This can be anything. We are calling ours `Add item`.
 - In the `User says` section, add some expressions that you think people would use to create a new item. Here are some examples:
   - Create a new todo
@@ -18,7 +18,7 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
   - Add new item
 - Your examples don't have to be comprehensive: Dialogflow automatically combines aspects of the examples you provide to generate new ones. For example, given the examples above, Dialogflow will also invoke your new intent when the user says _"Make new todo"_.
 
-![](screenshots/01-creation-intent/03-create-intent-parameter.markedup.png)
+![](screenshots/01-create-item/03-create-intent-parameter.markedup.png)
 - Click on the quotation mark symbol (`"`) in the left of the `User says` input box. It should be replaced by an `@` symbol.
 - You're now in template mode. Try entering these templates:
   - Add `@sys.any:text` as a new todo
@@ -36,7 +36,7 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 
 # Set up webhook fulfillment for the intent
 
-![](screenshots/01-creation-intent/04-create-intent-fullfilment.markedup.png)
+![](screenshots/01-create-item/04-create-intent-fullfilment.markedup.png)
 - Open the `Fulfillment` section of the intent editing page.
 - Check the `Use webhook` checkbox.
 - Navigate to the `Fulfillment` page. Don't forget to save your intent first!
@@ -62,10 +62,10 @@ Here is how the code works.
 
 # Test the intent
 
-![](screenshots/01-creation-intent/05-create-intent-simulate.png)
+![](screenshots/01-create-item/05-create-intent-simulate.png)
 - Open the [Actions for Google](https://console.actions.google.com), select your project and navigate to the Simulator page.
 - In the Actions for Google simulator, type or say _"Talk to my test app"_, then create a new todo item using the intent you just created.
 
-![](screenshots/01-creation-intent/06-create-intent-database.markedup.png)
+![](screenshots/01-create-item/06-create-intent-database.markedup.png)
 - Open the [Firebase Console](https://console.firebase.google.com) and navigate to the Database page.
 - Check that the newly-created todo exists in the database.
