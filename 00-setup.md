@@ -1,6 +1,6 @@
 # Contents
-- [Create an Actions on Google Project](#create-an-actionson-google-project)
-- [Connect the Actions on Google project to Dialogflow](#connect-the-actions-google-project-to-dialogflow)
+- [Create an Actions on Google Project](#create-an-actions-on-google-project)
+- [Connect the Actions on Google project to Dialogflow](#connect-the-actions-on-google-project-to-dialogflow)
 - [Enable Inline Editor](#enable-inline-editor)
 - [Setup Firebase Database](#setup-firebase-database)
 - [Enable Small Talk](#enable-small-talk)
@@ -9,6 +9,8 @@
 - [Bonus: Test out your app on your smartphone!](#bonus-test-out-your-app-on-your-smartphone)
 
 # Create an Actions on Google project
+
+[Back to top](#contents)
 
 ![](screenshots/00-setup/01-actions-on-google-homepage.markedup.png)
 - Visit https://developers.google.com/actions/.
@@ -23,6 +25,8 @@
 - Click on the "Create project" button.
 
 # Connect the Actions on Google project to Dialogflow
+
+[Back to top](#contents)
 
 ![](screenshots/00-setup/04-build-dialogflow-app.markedup.png)
 - On the overview page for you Actions on Google project, click on the "Build" button in the Dialogflow card.
@@ -52,6 +56,8 @@
 
 # Enable Inline Editor
 
+[Back to top](#contents)
+
 The Inline Editor allows you to deploy and edit Firebase Functions from your browser. We'll use Firebase Functions to create, edit, and delete todos that we'll store in Firebase Database.
 
 ![](screenshots/00-setup/09-dialogflow-integrations-page.markedup.png)
@@ -72,6 +78,8 @@ The Inline Editor allows you to deploy and edit Firebase Functions from your bro
 - A message will appear when the deployment is finished.
 
 # Setup Firebase Database
+
+[Back to top](#contents)
 
 By default, Firebase requires authentication for read and write access. However, for the purposes of this tutorial, we will bypass that and open up permissions to our database. **IMPORTANT: Never do this in production**
 
@@ -95,6 +103,8 @@ By default, Firebase requires authentication for read and write access. However,
 
 # Enable Small Talk
 
+[Back to top](#contents)
+
 Dialogflow's Small Talk feature allows your application to respond to simple questions like "How are you?"
 
 ![](screenshots/00-setup/13-dialogflow-click-on-small-talk.markedup.png)
@@ -105,9 +115,13 @@ Dialogflow's Small Talk feature allows your application to respond to simple que
 
 ## Bonus: customize your application's small talk!
 
+[Back to top](#contents)
+
 - Open one of the sections under the heading "Small Talk Customization Progress" and add some custom responses to common questions.
 
 # Test your Actions on Google project
+
+[Back to top](#contents)
 
 ![](screenshots/00-setup/15-click-on-simulator.markedup.png)
 - Switch back to the tab containing Actions on Google.
@@ -120,6 +134,8 @@ Dialogflow's Small Talk feature allows your application to respond to simple que
 - Try some small talk, e.g. "How are you?" or "You're so clever."
 
 ## Bonus: test out your app on your smartphone!
+
+[Back to top](#contents)
 
 - This will only work on Android phones that satisfy [these requirements](https://support.google.com/assistant/answer/7172657?co=GENIE.Platform%3DAndroid&hl=en#requirements).
 - Make sure that your phone is signed in to the same Google account that you've used to create the application.
