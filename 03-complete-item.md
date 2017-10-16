@@ -46,7 +46,7 @@ if (!itemNumber || isNaN(itemNumber)) {
             item.status = 'complete';
             // Update the item's status in the database.
             database.ref(`todos/${key}`).update(item);
-            respond(`Completed todo number ${itemNumber}`);
+            respond(`Completed todo number ${itemNumber}.`);
         } else {
             respond(`There is no todo number ${itemNumber}.`);
         }

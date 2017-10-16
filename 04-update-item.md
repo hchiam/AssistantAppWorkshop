@@ -25,26 +25,34 @@
 - Navigate to the Fulfillment page.
 - Insert code to create a new todo item and respond to the user. This code should go after the comment section `// Step 4`.
 ```js
-var itemNumber = parseInt(parameters['index']);
-var itemText = parameters['text'];
+const itemNumber = parseInt(parameters.index);
+const itemText = parameters.text;
 
-todoListRef.once('value', snapshot => {
-    var todoList = snapshot.val();
-    var item;
-    var keys = Object.keys(todoList);
-    if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
-        keys.forEach((key, idx) => {
-            if ((itemNumber - 1) === idx) {
-                item = todoList[key];
-                item.text = itemText;
-                firebase.database().ref(`todos/${key}`).update(item);
-                return;
-            }
-        });
-    }
-
-    respond(`Item #${itemNumber} updated to ${itemText}`);
-});
+if (!itemNumber || isNaN(itemNumber)) {
+    respond('Error: couldn\'t parse the item number.');
+} else if (!itemText) {
+    respond('Error: no item text specified.');
+} else {
+    // Read the todo list out of the database, then call the callback with the value as argument.
+    todoListRef.once('value', snapshot => {
+        const todoList = snapshot.val();
+        // If todoList is null or undefined, Object.keys(todoList) will throw an error. In this
+        // case, we default to an empty object so that keys will be the empty array.
+        const keys = Object.keys(todoList || {});
+        // Only proceed if todoList exists and itemNumber is between one and the number
+        // of items in the todo list.
+        if (todoList && itemNumber > 0 && itemNumber <= keys.length) {
+            const key = keys[itemNumber - 1];
+            let item = todoList[key];
+            item.text = itemText;
+            // Update the item's status in the database.
+            database.ref(`todos/${key}`).update(item);
+            respond(`Todo number ${itemNumber} updated to "${itemText}".`);
+        } else {
+            respond(`There is no todo number ${itemNumber}.`);
+        }
+    });
+}
 ```
 - Deploy your new code.
 
