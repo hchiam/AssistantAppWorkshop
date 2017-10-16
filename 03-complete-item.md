@@ -7,7 +7,7 @@
 - In the `User says` section, add some expressions that you think people would use to complete a item. Here are some examples:
   - Complete todo number `@sys.number-integer:index`
   - Complete `@sys.number-integer:index`
-  - Mark number @sys.number-integer:index as complete
+  - Mark number `@sys.number-integer:index` as complete
   - I've completed number `@sys.number-integer:index`
   - Cross off number `@sys.number-integer:index`
 - All the items should be in template mode.
