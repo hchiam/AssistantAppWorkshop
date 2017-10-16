@@ -44,13 +44,13 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
 ```js
 var item = parameters['text'];
 if (item) {
-  todoListRef.push({
-    status: "incomplete",
-    text: item,
-  });
-  respond('New item added successfully');
+    todoListRef.push({
+        status: "incomplete",
+        text: item,
+    });
+    respond('New item added successfully');
 } else {
-  respond('Error. You should say the item name');
+    respond('Error. You should say the item name');
 }
 ```
 - Deploy your new code.
