@@ -37,7 +37,7 @@ todoListRef.once('value', snapshot => {
                 index++;
                 return line;
             })
-            .join(',\n');
+            .join('\n');
         respond(`Here are your todos: ${listText}`);
     }
 });
