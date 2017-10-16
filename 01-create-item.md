@@ -25,13 +25,12 @@ Intents are the backbone of Dialogflow projects. Each intent describes a mapping
   - Add `@sys.any:text` to the list
   - Create a todo to `@sys.any:text`
   - Make a todo with description `@sys.any:text`
-- `@sys.any:text` should be highlighted in both examples. This means that, if a user enters _"Create a todo to wash the dishes"_, the intent will be invoked with the parameter `text` set to `wash the dishes`.
+- `@sys.any:text` should be highlighted in all examples. This means that, if a user enters _"Create a todo to wash the dishes"_, the intent will be invoked with the parameter `text` set to `wash the dishes`.
 - You can see a list of the intent's parameters in the `Action` section. Right now, you only have one parameter: `text`.
 - Make the `text` parameter required by checking the checkbox in the leftmost column of the parameter table.
 - Click on the `Define prompts` link in the rightmost column of the parameter table.
-- Add a prompt for when the user doesn't provide any text for the todo, e.g. _"What is the description of your new todo item?"_
-- Enter action name as `create`.
-
+- Add a prompt for when the user doesn't provide any text for the todo, e.g. _"What is the description of your new todo item?"_ Dialogflow will automatically respond with this prompt when the user tries to invoke this intent without specifying the missing parameter, e.g. by saying _"Create a todo"_.
+- Set the action name to `create`.
 - Click on the `Save` button.
 
 # Set up webhook fulfillment for the intent
@@ -63,9 +62,9 @@ Here is how the code works.
 # Test the intent
 
 ![](screenshots/01-create-item/05-create-intent-simulate.png)
-- Open the [Actions for Google](https://console.actions.google.com), select your project and navigate to the Simulator page.
-- In the Actions for Google simulator, type or say _"Talk to my test app"_, then create a new todo item using the intent you just created.
+- Open the [Actions for Google console](https://console.actions.google.com), select your project, and navigate to the Simulator page.
+- In the Actions for Google simulator, type or say _"Talk to my test app"_, then create a new to-do using the intent you just created.
 
 ![](screenshots/01-create-item/06-create-intent-database.markedup.png)
-- Open the [Firebase Console](https://console.firebase.google.com) and navigate to the Database page.
-- Check that the newly-created todo exists in the database.
+- Open the [Firebase Console](https://console.firebase.google.com), select your project, and navigate to the Database page.
+- Check that the newly-created to-do exists in the database.
