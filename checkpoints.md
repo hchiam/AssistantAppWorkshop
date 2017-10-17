@@ -30,4 +30,6 @@ Follow these instructions to configure your Dialogflow to the state after a step
 
 ## Importing fullfilment
 
-Copy and paste the appropriate code from above into your inline editor on Dialogflow, then click Deploy
+- Copy and paste the appropriate code from above into your inline editor on Dialogflow
+- Paste in your config from Firebase
+- Click "Deploy"
