@@ -45,6 +45,7 @@ After each step, you'll get to test your application's new functionality through
 - Add functionality: complete all todos in list
 - Learn about [deploying your app](https://developers.google.com/actions/distributing-your-apps)
 - Learn about [designing conversational UIs](https://developers.google.com/actions/design/)
+- Experiment with [Dialogflow’s prebuilt agents](https://dialogflow.com/docs/prebuilt-agents)
 
 # Resources
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
