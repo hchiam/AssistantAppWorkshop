@@ -113,8 +113,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const actionHandlers = {
         'create': () => {
             // Step 1
-            // Create a new to-do item from the given text
-            // The text of the new to-do item is stored in parameters.text
+            // Create a new todo item from the given text
+            // The text of the new todo item is stored in parameters.text
 
             // text is the text of the new todo being created.
             const text = parameters.text;
@@ -138,7 +138,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         'show': () => {
             // Step 2
-            // List the uncompleted to-do items created so far
+            // List the uncompleted todo items created so far
 
             // Read the todo list out of the database, then call the callback with the value as argument.
             todoListRef.once('value', snapshot => {
@@ -164,7 +164,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         'complete': () => {
             // Step 3
-            // Complete a to-do item
+            // Complete a todo item
             // The index of the item to complete is stored in parameters.index
 
             // itemNumber is the index of the specified todo, converted to an integer.
@@ -196,7 +196,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         'update': () => {
             // Step 4
-            // Update a to-do item with the given text
+            // Update a todo item with the given text
             // The updated text is stored in parameters.text
             // The index of the item to update is stored in parameters.index
 
