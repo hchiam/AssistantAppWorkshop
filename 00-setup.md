@@ -39,7 +39,7 @@
 - Click on the "Save" button.
 
 ![](screenshots/00-setup/07-dialogflow-intents-page.markedup.png)
-- After saving the project, you'll be redirected to the Intents page.
+- After saving the agent, you'll be redirected to the Intents page.
 - Click on the Integrations page in the menu on the left.
 
 ![](screenshots/00-setup/08-dialogflow-integrations-page.markedup.png)
