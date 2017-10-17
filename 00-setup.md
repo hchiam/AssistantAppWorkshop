@@ -35,7 +35,7 @@
 - Sign in to Google or authorize/allow permissions if necessary.
 
 ![](screenshots/00-setup/06-dialogflow-save-app.markedup.png)
-- In the tab containing Dialogflow, after signing in to Google, you'll end up on the project creation page.
+- In the tab containing Dialogflow, after signing in to Google, you'll end up on the agent creation page.
 - Click on the "Save" button.
 
 ![](screenshots/00-setup/07-dialogflow-intents-page.markedup.png)
