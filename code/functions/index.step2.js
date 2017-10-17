@@ -115,27 +115,37 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             // Step 1
             // Create a new to-do item from the given text
             // The text of the new to-do item is stored in parameters.text
-            var item = parameters['text'];
-            if (item) {
+
+            // text is the text of the new todo being created.
+            const text = parameters.text;
+            if (text) {
+                // Add the new todo to the database as a child of the existing todo node.
                 todoListRef.push({
-                status: "incomplete",
-                text: item,
-            });
-            respond('New item added successfully');
+                    status: "incomplete",
+                    text,
+                });
+                // Respond to indicate the todo was created successfully.
+                respond(`OK, I just added "${text}".`);
             } else {
-                respond('Error. You should say the item name');
+                // If text is falsy, respond with an error message.
+                // If you're seeing this response, check that the text parameter in the intent
+                // is required and that you've specified a prompt for it. If you've taken these
+                // steps, Dialogflow should prompt the user to specify the text, rather than
+                // making a request to your project's Firebase Function without the text parameter.
+                respond('Error: no item name specified.');
             }
         },
 
         'show': () => {
             // Step 2
             // List the uncompleted to-do items created so far
+
             // Read the todo list out of the database, then call the callback with the value as argument.
             todoListRef.once('value', snapshot => {
                 const todoList = snapshot.val();
                 // Check if the list is empty.
                 if (!todoList || Object.keys(todoList).length === 0){
-                    respond("Your list is empty");
+                    respond("Your todo list is empty.");
                 } else {
                     var index = 1;
                     // Create a list of todos, with the completed ones marked with [DONE].
@@ -146,8 +156,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                             index++;
                             return line;
                         })
-                        .join('\n');
-                    respond(`Here are your todos: \n${listText}`);
+                        .join(',\n');
+                    respond(`Here are your todos: ${listText}`);
                 }
             });
         },

@@ -115,27 +115,37 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             // Step 1
             // Create a new to-do item from the given text
             // The text of the new to-do item is stored in parameters.text
-            var item = parameters['text'];
-            if (item) {
+
+            // text is the text of the new todo being created.
+            const text = parameters.text;
+            if (text) {
+                // Add the new todo to the database as a child of the existing todo node.
                 todoListRef.push({
-                status: "incomplete",
-                text: item,
-            });
-            respond('New item added successfully');
+                    status: "incomplete",
+                    text,
+                });
+                // Respond to indicate the todo was created successfully.
+                respond(`OK, I just added "${text}".`);
             } else {
-                respond('Error. You should say the item name');
+                // If text is falsy, respond with an error message.
+                // If you're seeing this response, check that the text parameter in the intent
+                // is required and that you've specified a prompt for it. If you've taken these
+                // steps, Dialogflow should prompt the user to specify the text, rather than
+                // making a request to your project's Firebase Function without the text parameter.
+                respond('Error: no item name specified.');
             }
         },
 
         'show': () => {
             // Step 2
             // List the uncompleted to-do items created so far
+
             // Read the todo list out of the database, then call the callback with the value as argument.
             todoListRef.once('value', snapshot => {
                 const todoList = snapshot.val();
                 // Check if the list is empty.
                 if (!todoList || Object.keys(todoList).length === 0){
-                    respond("Your list is empty");
+                    respond("Your todo list is empty.");
                 } else {
                     var index = 1;
                     // Create a list of todos, with the completed ones marked with [DONE].
@@ -146,8 +156,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                             index++;
                             return line;
                         })
-                        .join('\n');
-                    respond(`Here are your todos: \n${listText}`);
+                        .join(',\n');
+                    respond(`Here are your todos: ${listText}`);
                 }
             });
         },
@@ -156,26 +166,32 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             // Step 3
             // Complete a to-do item
             // The index of the item to complete is stored in parameters.index
-            var itemNumber = parseInt(parameters['index']);
-            if (!itemNumber || isNaN(itemNumber)) { respond('Error. Something went wrong.'); }
-            
-            todoListRef.once('value', snapshot => {
-                var todoList = snapshot.val();
-                var item;
-                var keys = Object.keys(todoList);
-                if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
-                    keys.forEach((key, idx) => {
-                        if ((itemNumber - 1) === idx) {
-                            item = todoList[key];
-                            item.status = 'complete';
-                            database.ref(`todos/${key}`).update(item);
-                            return;
-                        }
-                    });
-                }
-            
-                respond(item ? `${item.text} completed` : 'We couldn\'t find this item');
-            });
+
+            // itemNumber is the index of the specified todo, converted to an integer.
+            const itemNumber = parseInt(parameters.index);
+            if (!itemNumber || isNaN(itemNumber)) {
+                respond('Error: couldn\'t parse the item number.');
+            } else {
+                // Read the todo list out of the database, then call the callback with the value as argument.
+                todoListRef.once('value', snapshot => {
+                    const todoList = snapshot.val();
+                    // If todoList is null or undefined, Object.keys(todoList) will throw an error. In this
+                    // case, we default to an empty object so that keys will be the empty array.
+                    const keys = Object.keys(todoList || {});
+                    // Only proceed if todoList exists and itemNumber is between one and the number
+                    // of items in the todo list.
+                    if (todoList && itemNumber > 0 && itemNumber <= keys.length) {
+                        const key = keys[itemNumber - 1];
+                        let item = todoList[key];
+                        item.status = 'complete';
+                        // Update the item's status in the database.
+                        database.ref(`todos/${key}`).update(item);
+                        respond(`Completed todo number ${itemNumber}.`);
+                    } else {
+                        respond(`There is no todo number ${itemNumber}.`);
+                    }
+                });
+            }
         },
 
         'update': () => {
@@ -183,26 +199,35 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             // Update a to-do item with the given text
             // The updated text is stored in parameters.text
             // The index of the item to update is stored in parameters.index
-            var itemNumber = parseInt(parameters['index']);
-            var itemText = parameters['text'];
-            
-            todoListRef.once('value', snapshot => {
-                var todoList = snapshot.val();
-                var item;
-                var keys = Object.keys(todoList);
-                if (itemNumber > 0 && todoList && keys.length >= itemNumber) {
-                    keys.forEach((key, idx) => {
-                        if ((itemNumber - 1) === idx) {
-                            item = todoList[key];
-                            item.text = itemText;
-                            firebase.database().ref(`todos/${key}`).update(item);
-                            return;
-                        }
-                    });
-                }
-            
-                respond(`Item #${itemNumber} updated to ${itemText}`);
-            });
+
+            const itemNumber = parseInt(parameters.index);
+            const itemText = parameters.text;
+
+            if (!itemNumber || isNaN(itemNumber)) {
+                respond('Error: couldn\'t parse the item number.');
+            } else if (!itemText) {
+                respond('Error: no item text specified.');
+            } else {
+                // Read the todo list out of the database, then call the callback with the value as argument.
+                todoListRef.once('value', snapshot => {
+                    const todoList = snapshot.val();
+                    // If todoList is null or undefined, Object.keys(todoList) will throw an error. In this
+                    // case, we default to an empty object so that keys will be the empty array.
+                    const keys = Object.keys(todoList || {});
+                    // Only proceed if todoList exists and itemNumber is between one and the number
+                    // of items in the todo list.
+                    if (todoList && itemNumber > 0 && itemNumber <= keys.length) {
+                        const key = keys[itemNumber - 1];
+                        let item = todoList[key];
+                        item.text = itemText;
+                        // Update the item's status in the database.
+                        database.ref(`todos/${key}`).update(item);
+                        respond(`Todo number ${itemNumber} updated to "${itemText}".`);
+                    } else {
+                        respond(`There is no todo number ${itemNumber}.`);
+                    }
+                });
+            }
         },
 
         // Default handler for unknown or undefined actions
