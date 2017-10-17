@@ -26,19 +26,19 @@ todoListRef.once('value', snapshot => {
     const todoList = snapshot.val();
     // Check if the list is empty.
     if (!todoList || Object.keys(todoList).length === 0){
-        respond("Your todo list is empty.");
+        respond("Your list is empty");
     } else {
         var index = 1;
         // Create a list of todos, with the completed ones marked with [DONE].
         const listText = Object.keys(todoList)
             .map(key => {
                 const { text, status } = todoList[key];
-                const line = `${index}. ${text}${status === "complete" ? " [DONE]" : ""}`;
+                const line = `[${index}] ${text}${status === "complete" ? " [DONE]" : ""}`;
                 index++;
                 return line;
             })
             .join(',\n');
-        respond(`Here are your todos: ${listText}`);
+        respond(`Here are your todos: \n${listText}`);
     }
 });
 ```

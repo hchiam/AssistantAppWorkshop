@@ -27,6 +27,7 @@ There are checkpoints available if you wish to get the state of the Dialogflow i
 ## [Step 2: Show List](./02-show-list.md)
 
 - Create an intent that lists the todos stored in Firebase Database
+- Change the project's Firebase Function to show the todo list from the Firebase Database 
 
 ## [Step 3: Complete Item](./03-complete-item.md)
 

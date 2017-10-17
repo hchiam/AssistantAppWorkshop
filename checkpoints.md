@@ -2,12 +2,20 @@
 
 Click on the link and click download to download the file
 
-- [Step 1 (Create item) completed](./code/Intents-Step-1.zip)
-- [Step 2 (Show list) completed](./code/Intents-Step-2.zip)
-- [Step 3 (Complete item) completed](./code/Intents-Step-3.zip)
-- [Step 4 (Update item) completed](./code/Intents-Step-4.zip)
+- Step 1 (Create item)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step1.js)
+- Step 2 (Show list)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step2.js)
+- Step 3 (Complete item)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step3.js)
+- Step 4 (Update item)
+    - [intents](./code/intents/intents.step.1.zip)
+    - [fullfilment](./code/functions/index.step4.js)
 
-## Steps
+## Importing intents
 
 Follow these instructions to configure your Dialogflow to the state after a step.
 
@@ -19,3 +27,7 @@ Follow these instructions to configure your Dialogflow to the state after a step
 - Select the ZIP file you just downloaded
 - Type `IMPORT` and click the Import buttom
 - Click `Done`
+
+## Importing fullfilment
+
+Copy and paste the appropriate code from above into your inline editor on Dialogflow, then click Deploy

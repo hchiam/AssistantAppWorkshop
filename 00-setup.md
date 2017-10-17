@@ -32,14 +32,14 @@
 ![](screenshots/00-setup/05-build-dialogflow-app-popup.markedup.png)
 - In the pop-up that appears, click on the "Create actions on Dialogflow" card.
 - This will open Dialogflow in a new tab.
-- Sign in to Google again if necessary.
+- Sign in to Google or authorize/allow permissions if necessary.
 
 ![](screenshots/00-setup/06-dialogflow-save-app.markedup.png)
-- In the tab containing Dialogflow, after signing in to Google, you'll end up on the project creation page.
+- In the tab containing Dialogflow, after signing in to Google, you'll end up on the agent creation page.
 - Click on the "Save" button.
 
 ![](screenshots/00-setup/07-dialogflow-intents-page.markedup.png)
-- After saving the project, you'll be redirected to the Intents page.
+- After saving the agent, you'll be redirected to the Intents page.
 - Click on the Integrations page in the menu on the left.
 
 ![](screenshots/00-setup/08-dialogflow-integrations-page.markedup.png)
@@ -47,6 +47,7 @@
 - Click on the Google Assistant card.
 
 ![](screenshots/00-setup/08.5-dialogflow-update-draft.markedup.png)
+- Click on the "Authorize" button if necessary, follow Google instructions.
 - Click on the "Update draft" button.
 
 ![](screenshots/00-setup/08.6-dialogflow-draft-updated.markedup.png)
@@ -85,10 +86,11 @@ By default, Firebase requires authentication for read and write access. However,
 - Click on the "View execution logs in the Firebase console" link to open your Firebase page.
 
 ![](screenshots/00-setup/20-firebase-setup-rule.markedup.png)
-- Navigate to the `Database page`
-- Switch to `Rules` tab
+- Navigate to the "Database page"
+- Click on "Get Started" button
+- Switch to "Rules" tab
 - Change the .read and .write to true.
-- Click on `Publish`
+- Click on "Publish"
 
 ![](screenshots/00-setup/18-firebase-database-setup.markedup.png)
 - Navigate to the Overview page
@@ -96,7 +98,7 @@ By default, Firebase requires authentication for read and write access. However,
 
 ![](screenshots/00-setup/19-firebase-database-setup-config.markedup.png)
 - Copy the config content
-- Past this code into the config variable on the Inline Editor (line 19)
+- Past this code into the config variable on the Inline Editor (line 18)
 - Click on the "Deploy" button.
 
 [Back to top](#contents)

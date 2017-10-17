@@ -152,12 +152,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                     const listText = Object.keys(todoList)
                         .map(key => {
                             const { text, status } = todoList[key];
-                            const line = `${index}. ${text}${status === "complete" ? " [DONE]" : ""}`;
+                            const line = `[${index}] ${text}${status === "complete" ? " [DONE]" : ""}`;
                             index++;
                             return line;
                         })
                         .join(',\n');
-                    respond(`Here are your todos: ${listText}`);
+                    respond(`Here are your todos: \n${listText}`);
                 }
             });
         },
