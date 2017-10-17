@@ -1,4 +1,4 @@
-Use Actions on Google, Dialogflow, and Firebase to create a todo application with a conversational UI.
+Use Actions on Google, Dialogflow (previously API.AI), and Firebase to create a todo application with a conversational UI.
 
 # Missed part of the workshop?
 
