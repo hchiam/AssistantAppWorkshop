@@ -1,5 +1,9 @@
 Use Actions on Google, Dialogflow, and Firebase to create a todo application with a conversational UI.
 
+# Missed part of the workshop?
+
+To catch up, complete [Step 0](./00-setup.md), then update your application to reach one of the [checkpoints](./checkpoints.md).
+
 # Steps
 
 In Step 0, you'll set up a new Actions on Google application, backed by Dialogflow and Firebase.
@@ -7,9 +11,6 @@ In Step 0, you'll set up a new Actions on Google application, backed by Dialogfl
 In Steps 1 through 4, you'll add four pieces of functionality to your application: creating new todos, listing existing ones, and updating a todo's status and text.
 
 After each step, you'll get to test your application's new functionality through the Actions on Google simulator.
-
-## [Checkpoints](./checkpoints.md)
-There are checkpoints available if you wish to get the state of the Dialogflow intents after each step.
 
 ## [Step 0: Setup](./00-setup.md)
 
