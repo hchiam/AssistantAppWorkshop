@@ -40,6 +40,12 @@ After each step, you'll get to test your application's new functionality through
 - Create an intent that updates the text of a todo
 - Change the project's Firebase Function to store the updated text in Firebase Database
 
+# Next steps
+- Add functionality: completely delete an todo item from list
+- Add functionality: complete all todos in list
+- Learn about [deploying your app](https://developers.google.com/actions/distributing-your-apps)
+- Learn about [designing conversational UIs](https://developers.google.com/actions/design/)
+
 # Resources
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
 - [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
