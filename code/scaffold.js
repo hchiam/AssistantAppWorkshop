@@ -18,7 +18,6 @@ const config = {
     // Insert configuration here
 };
 firebase.initializeApp(config);
-var database;
 
 // Get database reference and Todo List reference from firebase
 var database;
