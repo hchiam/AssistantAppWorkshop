@@ -48,6 +48,7 @@ After each step, you'll get to test your application's new functionality through
 - Learn about [deploying your Google Assistant app](https://developers.google.com/actions/distributing-your-apps)
 
 # Resources
+- [Google Assistant App Tutorials by Google](https://www.youtube.com/watch?v=3NIopUsI4ik&list=PLOU2XLYxmsILvfJcIASBDbgfxloFz_XsU)
 - [Apple SiriKit](https://developer.apple.com/sirikit/)
 - [SiriKit Tutorial](https://www.raywenderlich.com/155732/sirikit-tutorial-ios)
 - [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit)
